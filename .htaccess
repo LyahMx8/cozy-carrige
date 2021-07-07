@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Forzar la codificacion UTF-8 en varios tipos de archivos
+AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+
+    
+# friendly url
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# custom error pages
+
+#Prohibir el acceso a directorios
+Options -Indexes
+Options All -Indexes
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+</IfModule>
+
+#Proteger htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+</IfModule>

@@ -1,0 +1,25 @@
+{
+	"short_name": "CozyCarrige",
+	"name": "Regístrate y sé un #Cozyer",
+	"icons": [
+		{
+			"src": "crpast/image/icon/fav.png",
+			"type": "image/png",
+			"sizes": "48x48"
+		},
+		{
+			"src": "crpast/image/icon/fav.png",
+			"type": "image/png",
+			"sizes": "96x96"
+		},
+		{
+			"src": "crpast/image/icon/fav.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}
+	],
+	"background_color": "#22D3F5",
+	"display": "standalone",
+	"theme_color": "#22D3F5",
+	"start_url": "index.php/?utm_source=homescreen"
+}
